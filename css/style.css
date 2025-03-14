@@ -29,21 +29,6 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.navbar.transparent {
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: none;
-}
 
 .logo {
     font-size: 28px;

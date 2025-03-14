@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Clínica Veterinária</title>
+    <link rel="stylesheet" href="../css/consulta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://st2.depositphotos.com/5056293/9389/v/450/depositphotos_93899252-stock-illustration-vector-sign-veterinary.jpg" alt="PetCare" class="logo-img">
+                PetCare
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" rel="prev">Início</a></li>
+                <li><a href="servico.html" rel="next">Serviços</a></li>
+                <li><a href="#">Equipe</a></li>
+                <li><a href="#">Depoimentos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="h1">
+        <h1>Agendar Consulta</h1>
+        <p class="p">Agende uma consulta para seu pet com nossa equipe de veterinários especializados. <br> Preencha o formulário abaixo e entraremos em contato para confirmar seu <br> agendamento.</p>
+    </div>
+    
+    <div class="container">
+        <div class="agendamento">
+            <h2>Informações do Agendamento</h2>
+            <form>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nome-pet">Nome do Pet</label>
+                        <input type="text" id="nome-pet" placeholder="Ex: Rex">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-pet">Tipo de Pet</label>
+                        <select id="tipo-pet">
+                            <option>Selecione o tipo de pet</option>
+                            <option>Cachorro</option>
+                            <option>Gato</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Seu Nome</label>
+                        <input type="text" id="nome" placeholder="Nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-servico">Tipo de Serviço</label>
+                        <select id="tipo-servico">
+                            <option>Selecione o serviço</option>
+                            <option>Consulta</option>
+                            <option>Vacinação</option>
+                            <option>Banho & Tosa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input type="date" id="data">
+                    </div>
+                    <div class="form-group">
+                        <label for="horario">Horário</label>
+                        <select id="horario">
+                            <option>Selecione um horário</option>
+                            <option>08:00</option>
+                            <option>10:00</option>
+                            <option>14:00</option>
+                            <option>16:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" placeholder="Descreva os sintomas ou motivo da consulta (opcional)"></textarea>
+                </div>
+                <button type="submit" class="btn">Agendar Consulta</button>
+            </form>
+        </div>
+        <div class="clinica-info">
+            <h2>Informações da Clínica</h2>
+            <p><strong>Horário de Funcionamento</strong></p>
+            <ul>
+                <li>Segunda - Sexta: 08:00 - 18:00</li>
+                <li>Sábado: 08:00 - 12:00</li>
+                <li>Domingo e Feriados: Fechado</li>
+            </ul>
+            <p><strong>Endereço</strong></p>
+            <p>Rua Exemplo, 123<br>Bairro Central<br>São Paulo - SP<br>CEP: 01234-567</p>
+            <button class="btn">Ligar para a Clínica</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>PetCare</h3>
+                <p>Cuidado veterinário de qualidade para todos os tipos de animais de estimação.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Equipe</a></li>
+                    <li><a href="#">Depoimentos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section horario">
+                <h3>Horário de Atendimento</h3>
+                <p>Segunda a Sexta: 8h às 19h</p>
+                <p>Sábados: 8h às 16h</p>
+                <p>Domingos e Feriados: 9h às 12h</p>
+                <p class="emergencia"><a href="#">Plantão 24h para Emergências</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PetCare Clínica Veterinária. Todos os direitos reservados.</p>
+            <p>Feito com <span class="heart">❤️</span> para todos os animais</p>
+        </div>
+    </footer>
+</body>
+</html>
