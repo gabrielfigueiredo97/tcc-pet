@@ -95,8 +95,7 @@ body {
 }
 
 .btn:hover {
-    background: #38b2aef8;
-    transform: scale(1.05);
+    background: #2a8d87; /* Tom mais escuro da cor original */
 }
 
 .hero {

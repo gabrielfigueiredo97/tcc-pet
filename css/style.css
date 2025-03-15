@@ -86,8 +86,8 @@ body {
     background: #38b2aef8;
     color: #fff;
     text-decoration: none;
-    border-radius: 12px;
-    font-size: 18px;
+    border-radius: 35px;
+    font-size: 15px;
     font-weight: bold;
     transition: background 0.3s ease-in-out; /* Suaviza a mudança de cor */
 }
