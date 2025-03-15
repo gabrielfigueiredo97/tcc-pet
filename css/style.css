@@ -55,6 +55,7 @@ body {
 }
 
 .nav-links a {
+    position: relative; /* Necessário para posicionar o ::after */
     text-decoration: none;
     color: #333;
     font-size: 18px;
@@ -62,9 +63,22 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-    color: #38b2aef8;
+/* Cria a linha oculta inicialmente */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px; /* Ajuste a posição da linha */
+    width: 0;
+    height: 2px;
+    background-color: #38b2aef8; /* Cor da linha */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Faz a linha aparecer ao passar o mouse */
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .btn {
@@ -75,12 +89,11 @@ body {
     border-radius: 12px;
     font-size: 18px;
     font-weight: bold;
-
+    transition: background 0.3s ease-in-out; /* Suaviza a mudança de cor */
 }
 
 .btn:hover {
-    background: #38b2aef8;
-    transform: scale(1.05);
+    background: #2a8d87; /* Tom mais escuro da cor original */
 }
 
 .hero {
@@ -91,17 +104,32 @@ body {
     padding: 160px 50px 100px;
     gap: 50px;
     flex-wrap: wrap;
-    max-width: 100%; /* Garantir que o conteúdo não ultrapasse a tela */
-    overflow: hidden; /* Previne o conteúdo de transbordar, caso haja imagens grandes */
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero .image-container {
+    width: 650px; /* Aumentado para um tamanho melhor */
+    height: 650px;
+    overflow: hidden; 
+    border-radius: 40px; /* Bordas mais arredondadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero img {
-    width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
-    max-width: 500px; /* Limita a largura máxima da imagem */
-    height: auto; /* Ajusta a altura proporcionalmente */
-    object-fit: contain; /* Faz com que a imagem se ajuste sem deformar */
-    border-radius: 8px; /* Se desejar arredondar os cantos da imagem */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a imagem cobrindo toda a área */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
 }
+
+.hero .image-container:hover img {
+    transform: scale(1.1); /* Aplica um pequeno zoom ao passar o mouse */
+}
+
 
 .hero-text {
     max-width: 45%;
